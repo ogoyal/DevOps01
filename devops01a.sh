@@ -23,5 +23,4 @@ printf "\n"
 echo "Amount of ram"
 free -m
 
-
-
+echo "ip-address: `/sbin/ifconfig | head -2 | grep 'inet ' | tr -s ' ' | sed 's/addr://g' |cut -d' ' -f3` mac-address: `/sbin/ifconfig | head -1 | tr -s ' ' | cut -d' ' -f5 | tr ':' ' ' |tr 'a-z' 'A-Z'|sed 's/ //g'`"
